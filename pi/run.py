@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import onnxruntime as rt
 from ultralytics.utils.plotting import Annotator
+import time
 
 import pyttsx3
  
@@ -293,8 +294,8 @@ def scale_boxes(img1_shape, boxes, img0_shape, ratio_pad=None):
     return boxes
  
 if __name__ == "__main__":
-    onnxModulePath = "yolov5s.onnx"
-    imgsz = (640, 640)
+    onnxModulePath = "v5lite-e.onnx"
+    imgsz = (320,320)
     cap=cv2.VideoCapture(0)
     if not cap.isOpened:
         print("NO VIDEO!")
@@ -309,7 +310,7 @@ if __name__ == "__main__":
             if not ret:
                 print("CANOT READ")
                 break
-            img = cv2.resize(img, (640, 640))
+            img = cv2.resize(img, imgsz)
  
             # preprocess
             im = letterbox(img, imgsz, auto=True)[0]  # padded resize
@@ -366,7 +367,7 @@ if __name__ == "__main__":
                             s.say(det0)
                             s.runAndWait()
                             print(det0)
-                        if len(detected)>=500:
+                        if len(detected)>=3:
                             detected.pop(0)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break

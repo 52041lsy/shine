@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black" >
+
+
+    <org.osmdroid.views.MapView
+
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/fall"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/alert_icon"
+        android:visibility="invisible" />
+
+    <FrameLayout
+        android:id="@+id/a_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/round4"
+            android:gravity="center|right"
+            android:orientation="vertical"
+            android:text="No Location"
+            android:textColor="#0F3459"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/pin_icon"
+            android:layout_gravity="left|center_vertical"
+            />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/b_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="650dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/exit"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:background="@drawable/circle"
+            android:scaleType="centerInside"
+            android:src="@drawable/logout_icon"
+            android:layout_gravity="left|center_vertical" />
+
+        <ImageButton
+            android:id="@+id/user"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:background="@drawable/circle"
+            android:scaleType="centerInside"
+            android:src="@drawable/user_icon"
+            android:layout_gravity="right|center_vertical" />
+
+        <ImageButton
+            android:id="@+id/call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/round3"
+            android:scaleType="centerInside"
+            android:src="@drawable/phone_call" />
+    </FrameLayout>
+</RelativeLayout>

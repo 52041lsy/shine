@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Luminova</string>
+    <string name="sign_in">LOG IN</string>
+    <string name="register">SIGN UP</string>
+    <string name="fall">FALL!</string>
+
+</resources>

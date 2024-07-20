@@ -1,2 +1,4 @@
-# SHINE
-intelligence glasses 
+## 导盲系统
+- newapp：安卓客户端代码
+- pi：树莓派模型部署代码
+- demo：后端代码
